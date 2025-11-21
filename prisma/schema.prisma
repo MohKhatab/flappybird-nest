@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+generator zod {
+  provider = "zod-prisma-types"
+  output   = "../src/generated/zod" // Output folder
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Score{
+  id Int @default(autoincrement()) @id
+  name String
+  score Int
+}
