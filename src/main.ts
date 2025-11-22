@@ -5,7 +5,7 @@ import { NextFunction, Request, Response } from 'express';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://facelog-2.vercel.app',
+    origin: '*',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   });
